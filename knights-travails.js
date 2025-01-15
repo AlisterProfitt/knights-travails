@@ -43,7 +43,6 @@ function knightMoves(i, j) {
                 const pathArray = path.split('|').map((value) => value = [+value[0], +value[2]])
                 if (pathArray.length < minLength) {
                     minLength = pathArray.length;
-                    console.log(pathArray);
                     shortestPath = pathArray.slice();
                 }
             }
@@ -56,4 +55,4 @@ function knightMoves(i, j) {
     return `You made it in ${minLength - 1} moves! Here's your path: \n${shortestPath.join('\n')}`
 }
 
-console.log(knightMoves([3, 3], [4, 3]));
+console.log(knightMoves([3, 3], [7, 6]));
